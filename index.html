@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <style>
+            body{
+                background-color: white;
+                color: black;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-size: 10px;
+                font-weight: 100;
+                line-break: auto;
+                line-height: 2.6;
+                background-color: lightgrey;
+                padding: 100px;
+            }
+            #container{
+                padding: 100px;
+                background-color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+        <center><h1 id="title" style="font-size: 50px; text-decoration: underline;"></h1></center>
+        <br/>
+        <h1 id="essaycontent"></h1>
+        </div>
+
+
+        <script>
+            var x = -1;
+            var text = ''
+            document.onkeypress=function(e){
+                x++;
+                var contents = document.getElementById("essaycontent");
+                var today = new Date();
+                document.getElementById("title").innerText = GETTITLE;
+                var unfiltered = (REPLACEME.toString()).split(" ")
+                text = text + " " + unfiltered[x]
+                contents.innerHTML = text;
+                console.log(text)
+            }
+        </script>
+    </body>
+
+</html>
